@@ -12,6 +12,8 @@ import { LandingFooterComponent } from './components/landing-footer/landing-foot
 import { RegisterComponent } from './pages/register/register.component';
 import { RegistrationFormComponent } from './components/registration-form/registration-form.component';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './pages/login/login.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { FormsModule } from '@angular/forms';
     LandingFooterComponent,
     RegisterComponent,
     RegistrationFormComponent,
+    LoginComponent,
+    LoginFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
   providers: [],
