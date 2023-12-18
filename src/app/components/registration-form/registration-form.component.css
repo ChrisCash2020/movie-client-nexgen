@@ -45,7 +45,7 @@ a:hover {
 }
 
 :focus {
-  outline: none;
+  outline: #fff;
 }
 
 .wrapper {
@@ -62,6 +62,9 @@ a:hover {
   max-width: 850px;
   margin: auto;
   display: flex;
+  box-shadow: 3px 3px 25px 2px #ccc;
+  border: 2.5px solid whitesmoke;
+  border-right-color: #fcc419;
 }
 
 .inner .image-holder {
@@ -150,17 +153,14 @@ i {
   font-family: inherit;
 }
 
+.form-control:focus {
+  box-shadow: none;
+}
+
 select {
-  -moz-appearance: none;
-  -webkit-appearance: none;
+  appearance: auto;
   cursor: pointer;
   padding-left: 20px;
-}
-.select_menu {
-  font-size: 12px;
-  outline: none;
-  border: thin #ddd solid;
-  background-color: #f7f7f7;
 }
 
 select option[value=""][disabled] {
@@ -178,7 +178,7 @@ button {
   align-items: center;
   justify-content: center;
   padding: 0;
-  background: #38bdf8;
+  background: #b48212;
   font-size: 15px;
   color: #fff;
   vertical-align: middle;
@@ -327,7 +327,7 @@ button:active i {
   position: relative;
   padding: 6px;
   cursor: pointer;
-  border: 10px solid #38bdf8;
+  border: 10px solid #fcc419;
   margin-bottom: 25px;
 }
 
@@ -378,7 +378,7 @@ input[type="file"] {
 
 #photo-upload {
   border: 0px;
-  border-bottom: 3px solid #38bdf8;
+  border-bottom: 3px solid #fcc419;
   height: 100%;
   text-transform: uppercase;
   outline: 0px;

@@ -11,6 +11,7 @@ import { LandingMarketingComponent } from './components/landing-marketing/landin
 import { LandingFooterComponent } from './components/landing-footer/landing-footer.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { RegistrationFormComponent } from './components/registration-form/registration-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { RegistrationFormComponent } from './components/registration-form/regist
     RegisterComponent,
     RegistrationFormComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule],
+  imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
