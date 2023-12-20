@@ -9,11 +9,13 @@ import { LandingComponent } from './pages/landing/landing.component';
 import { LandingCommunityComponent } from './components/landing-community/landing-community.component';
 import { LandingMarketingComponent } from './components/landing-marketing/landing-marketing.component';
 import { LandingFooterComponent } from './components/landing-footer/landing-footer.component';
-import { RegisterComponent } from './pages/register/register.component';
 import { RegistrationFormComponent } from './components/registration-form/registration-form.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './pages/login/login.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { RegistrationOnboardingComponent } from './components/registration-onboarding/registration-onboarding.component';
+import { RegistrationComponent } from './pages/registration/registration.component';
+import { RegistrationOnboardingScreenComponent } from './components/registration-onboarding-screen/registration-onboarding-screen.component';
 
 @NgModule({
   declarations: [
@@ -24,10 +26,12 @@ import { LoginFormComponent } from './components/login-form/login-form.component
     LandingCommunityComponent,
     LandingMarketingComponent,
     LandingFooterComponent,
-    RegisterComponent,
     RegistrationFormComponent,
     LoginComponent,
     LoginFormComponent,
+    RegistrationOnboardingComponent,
+    RegistrationComponent,
+    RegistrationOnboardingScreenComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
   providers: [],

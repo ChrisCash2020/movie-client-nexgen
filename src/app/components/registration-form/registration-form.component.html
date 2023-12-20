@@ -1,102 +1,69 @@
-<div class="wrapper col-lg-11 text-center mx-auto col-12">
-  <button
-    type="button"
-    role="presentation"
-    class="onboarding-btns onboarding-prev"
-  >
-    <i class="bi bi-arrow-left-short"></i>
-  </button>
-  <div class="inner">
-    <div class="onboarding-dots">
-      <button role="button" class="onboarding-dot">
-        <span></span>
-      </button>
-      <button role="button" class="onboarding-dot active">
-        <span></span>
-      </button>
-      <button role="button" class="onboarding-dot">
-        <span></span>
-      </button>
-      <button role="button" class="onboarding-dot">
-        <span></span>
-      </button>
-    </div>
-    <form>
-      <div class="center col">
-        <label class="custom-file-upload" style="margin-top: 25px"
-          ><div class="img-wrap img-upload">
-            <img />
-          </div>
-          <input
-            id="photo-upload"
-            type="file"
-            name="img"
-            accept="image/gif, image/jpeg, image/png"
-        /></label>
+<form>
+  <div class="center col">
+    <label class="custom-file-upload" style="margin-top: 25px"
+      ><div class="img-wrap img-upload">
+        <img />
       </div>
-      <h3>Register</h3>
-      <div class="form-group">
-        <input type="text" placeholder="First Name" class="form-control" />
-        <input type="text" placeholder="Last Name" class="form-control" />
-      </div>
-      <div class="form-wrapper">
-        <input type="text" placeholder="Username" class="form-control" />
-        <i class="bi bi-person-fill"></i>
-      </div>
-      <div class="form-wrapper">
-        <input type="password" placeholder="Password" class="form-control" />
-        <i class="bi bi-key-fill"></i>
-      </div>
-      <div class="form-wrapper">
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Birthday (DD/MM/YYYY)"
-          aria-label="Birthday"
-          [(ngModel)]="model"
-          ngbDatepicker
-          #d="ngbDatepicker"
-        />
-        <i
-          style="font-size: 10px; padding-right: 2px"
-          class="bi bi-calendar-fill"
-          (click)="d.toggle()"
-          type="button"
-        ></i>
-      </div>
-      <div class="form-wrapper">
-        <select name="" id="" class="form-control">
-          <option value="" disabled="" selected="">Status</option>
-          <option value="male">Single</option>
-          <option value="female">Taken</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <select name="" id="" class="form-control">
-          <option value="" disabled="" selected="">Gender</option>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-          <option value="other">Other</option>
-        </select>
-
-        <select name="" id="" class="form-control">
-          <option value="" disabled="" selected="">Preferences</option>
-          <option value="male">Male</option>
-          <option value="femal">Female</option>
-          <option value="other">Other</option>
-        </select>
-      </div>
-      <button class="button">
-        Register
-        <i class="bi bi-box-arrow-in-right"></i>
-      </button>
-    </form>
+      <input
+        id="photo-upload"
+        type="file"
+        name="img"
+        accept="image/gif, image/jpeg, image/png"
+    /></label>
   </div>
-  <button
-    type="button"
-    role="presentation"
-    class="onboarding-btns onboarding-next"
-  >
-    <i class="bi bi-arrow-right-short"></i>
+  <div class="form-group">
+    <input type="text" placeholder="First Name" class="form-control" />
+    <input type="text" placeholder="Last Name" class="form-control" />
+  </div>
+  <div class="form-wrapper">
+    <input type="text" placeholder="Username" class="form-control" />
+    <i class="bi bi-person-fill"></i>
+  </div>
+  <div class="form-wrapper">
+    <input type="password" placeholder="Password" class="form-control" />
+    <i class="bi bi-key-fill"></i>
+  </div>
+  <div class="form-wrapper">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Birthday (DD/MM/YYYY)"
+      aria-label="Birthday"
+      [(ngModel)]="model"
+      ngbDatepicker
+      #d="ngbDatepicker"
+    />
+    <i
+      style="font-size: 10px; padding-right: 2px"
+      class="bi bi-calendar-fill"
+      (click)="d.toggle()"
+      type="button"
+    ></i>
+  </div>
+  <div class="form-wrapper">
+    <select name="" id="" class="form-control">
+      <option value="" disabled="" selected="">Status</option>
+      <option value="male">Single</option>
+      <option value="female">Taken</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <select name="" id="" class="form-control">
+      <option value="" disabled="" selected="">Gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+
+    <select name="" id="" class="form-control">
+      <option value="" disabled="" selected="">Preferences</option>
+      <option value="male">Male</option>
+      <option value="femal">Female</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+  <button class="button">
+    Register
+    <i class="bi bi-box-arrow-in-right"></i>
   </button>
-</div>
+</form>

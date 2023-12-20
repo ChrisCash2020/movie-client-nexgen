@@ -29,7 +29,10 @@ export class CustomDateParserFormatter extends NgbDateParserFormatter {
 @Component({
   selector: 'app-registration-form',
   templateUrl: './registration-form.component.html',
-  styleUrl: './registration-form.component.css',
+  styleUrls: [
+    '../../pages/registration/registration.component.css',
+    './registration-form.component.css',
+  ],
   providers: [
     { provide: NgbDateParserFormatter, useClass: CustomDateParserFormatter },
   ],

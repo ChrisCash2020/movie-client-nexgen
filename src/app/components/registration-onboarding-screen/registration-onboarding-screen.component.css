@@ -1,0 +1,30 @@
+.onboarding-screen {
+  margin: 78.5px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.media {
+  height: 130px;
+  margin: 32px auto;
+  width: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+@media (max-height: 700px) {
+  .media {
+    margin: 25px auto;
+  }
+}
+
+@media (max-height: 800px) {
+  .onboarding-screen {
+    margin: 59px 0;
+  }
+}
