@@ -14,7 +14,7 @@ body {
 input,
 textarea,
 select,
-button {
+.button {
   font-family: inherit;
   color: #374151;
   font-size: 13px;
@@ -47,10 +47,77 @@ a:hover {
 :focus {
   outline: #fff;
 }
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.inner {
+  padding: 20px;
+  padding-top: 0px;
+  background: #fff;
+  max-width: 561px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 3px 3px 25px 2px #ccc;
+  border: 2.5px solid whitesmoke;
+  border-right-color: #fcc419;
+  border-top: transparent;
+  margin: 20px;
+  position: relative;
+}
+
+.onboarding-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  padding: 2px 0;
+  background-color: #ffc200;
+  width: calc(100% + 2.5px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: -2.5px;
+}
+.onboarding-btns,
+.onboarding-dot {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.onboarding-dot span {
+  width: 8px;
+  height: 8px;
+  margin: 5px 7px;
+  /* background: #d6d6d6; */
+  background: #ffffff;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity 0.2s ease;
+  border-radius: 30px;
+}
+
+.onboarding-btns i {
+  font-size: 75px;
+}
+
+.onboarding-btns i:hover {
+  color: #ffc200;
+}
 
 form {
   width: 100%;
-  padding-top: 36px;
+  padding-top: 16px;
   padding-left: 45px;
   padding-right: 45px;
 }
@@ -143,7 +210,7 @@ select option[value=""][disabled] {
   display: none;
 }
 
-button {
+.button {
   border: none;
   width: 164px;
   height: 51px;
@@ -155,8 +222,8 @@ button {
   align-items: center;
   justify-content: center;
   padding: 0;
-  background: #b48212;
-  font-size: 15px;
+  background: #ffc200;
+  font-size: 17px;
   color: #fff;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -165,15 +232,15 @@ button {
   transition-duration: 0.3s;
 }
 
-button i {
+.button i {
   margin-left: 10px;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
 
-button:hover i,
-button:focus i,
-button:active i {
+.button:hover i,
+.button:focus i,
+.button:active i {
   -webkit-animation-name: hvr-icon-wobble-horizontal;
   animation-name: hvr-icon-wobble-horizontal;
   -webkit-animation-duration: 1s;
@@ -260,17 +327,31 @@ button:active i {
     padding-left: 30px;
     padding-right: 30px;
   }
+
+  .onboarding-dots {
+    padding: 2px 0;
+  }
 }
 
 @media (max-width: 767px) {
   form {
     width: 100%;
-    padding: 10px 0 30px;
+    padding: 10px 0 5px;
   }
 
-  button {
+  .button {
     margin-top: 10px;
     margin-bottom: 0px;
+  }
+
+  .inner {
+    display: block;
+  }
+}
+
+@media (max-width: 626px) {
+  .onboarding-btns {
+    display: none;
   }
 }
 
@@ -354,8 +435,37 @@ input[type="file"] {
   outline: 0px;
 }
 
-@media (max-height: 750px) {
+@media (max-height: 800px) {
+  .form-control {
+    margin-bottom: 15px;
+  }
+
+  .form-group input:first-child,
+  .form-group select:first-child {
+    margin-right: 15px;
+  }
+
   .img-upload:before {
-    top: 55%;
+    font-size: 40px;
+    width: 5rem;
+    height: 5rem;
+  }
+  .new-img-upload {
+    background-size: 5rem 5rem;
+  }
+  .img-wrap {
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+  .onboarding-dots {
+    padding: 2px 0;
+  }
+
+  form {
+    padding-top: 10px;
   }
 }
