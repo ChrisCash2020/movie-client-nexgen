@@ -70,6 +70,7 @@ ul {
   font-weight: 400;
   border-radius: 8px !important;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+  text-shadow: 1px 1px 1px #979797;
 }
 
 .btn:hover {
@@ -78,12 +79,12 @@ ul {
 
 .btn-demo-small {
   font-size: 12px;
-  background-color: #003b4d;
+  background-color: #ffc200;
   padding: 0px 4px;
 }
 
 .btn-demo-small:hover {
-  background-color: #014c63;
+  background-color: #ffce2d;
 }
 
 .btn-demo-small a {
@@ -107,6 +108,9 @@ ul {
 }
 
 @media (max-width: 581px) {
+  .btn {
+    text-shadow: none;
+  }
   .nav-right {
     float: left;
   }
@@ -160,7 +164,7 @@ ul {
   }
 }
 /* Desktop nav styles */
-@media (min-width: 581px) {
+@media (min-width: 582px) {
   .icon-mobile {
     display: none;
   }

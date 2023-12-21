@@ -1,122 +1,150 @@
-/* ==============================================
-   4. Hero
-===============================================*/
-
-#hero-bg {
-  background: url("../../../assets/images/movie-client-landing-page.png")
-    no-repeat;
-  background-position: center;
-  background-size: cover;
-  margin-top: 65px;
+#hero-wrapper {
+  font-family: inherit;
+  padding: 35px 0;
+  padding-left: 28px;
+  padding-right: 28px;
 }
 
-#hero-bg-article {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-bottom: 4rem;
-  max-width: 1536px;
-  text-align: left;
-  padding-top: 24.5rem;
-  margin-left: 2rem;
-  margin-right: auto;
+#hero-container {
+  margin: 0 auto;
+  max-width: 1100px;
+  display: flex;
+  font-family: inherit;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
 }
 
-#hero-bg-article h1 {
+#hero-info {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  flex: 0 0 auto;
+  width: 50;
+  display: flex;
+  flex-direction: column;
+}
+
+#hero-info h1 {
   margin-bottom: 1rem;
-  font-size: 1.875rem;
+  font-size: 3.75rem;
   line-height: 2.25rem;
   font-weight: 800;
   letter-spacing: -0.025em;
   line-height: 1;
-  color: #ffffff;
+  color: #374151;
 }
 
-#hero-bg-article p {
-  margin-bottom: 0.5rem;
-  font-weight: 400;
-  color: #ffffff;
+#hero-info p {
+  letter-spacing: -0.025em;
+  margin-bottom: 1px;
+  font-weight: 500;
+  font-weight: 600;
+  color: #252525;
+  font-size: 1.375rem;
 }
 
-#hero-bg-article a {
+#hero-info a {
   display: inline-flex;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  padding: 0.75rem 1.25rem;
   justify-content: center;
   align-items: center;
   border-radius: 0.5rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   font-weight: 500;
   text-align: center;
   color: #ffffff;
   text-decoration: none;
-  background-color: #b48212;
+  background-color: #ffc200;
+  text-shadow: 1px 1px 1px #979797;
   margin-top: 20px;
+  max-width: 127px;
 }
 
-#hero-svg {
-  width: 0.875rem;
-  height: 0.875rem;
-  margin-inline-start: 0.5rem;
+#hero-info a i {
+  margin-left: 3px;
 }
 
-/* ==============================================
-   9. Media Queries
-===============================================*/
+#hero-img {
+  height: 468px;
+  width: clamp(312px, 100%, 460px);
+  padding: 38px;
+}
 
-/* Mobile hero styles*/
-@media (min-width: 580px) {
-  #hero-bg-article {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+@media (max-width: 1038px) {
+  #hero-info a {
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
-  #hero-bg-article p {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+  #hero-info {
+    padding: 2.5rem 0;
+    margin-right: 1rem;
   }
-  #hero-bg-article a {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+  #hero-info a i {
+    margin-left: 5px;
+    font-size: 17px;
   }
-  .navbar-expand-lg .navbar-toggler {
-    display: none;
-  }
-  .navbar-expand-lg .navbar-collapse {
-    display: flex !important;
-    flex-basis: auto;
-  }
-  .navbar-expand-lg .navbar-nav {
-    flex-direction: row;
+}
+
+@media (max-width: 1033px) {
+  #hero-img {
+    padding-top: 3.5rem;
   }
 }
 @media (max-width: 580px) {
-  #hero-bg-article h1 br {
-    display: none;
+  #hero-info {
+    margin-right: 0;
   }
-}
-
-/* Desktop hero styles */
-@media (min-width: 768px) {
-  #hero-bg-article h1 {
+  #hero-info h1 {
     font-size: 3rem;
-    line-height: 1;
+  }
+
+  #hero-img {
+    padding: 0px;
+    padding-top: 56px;
   }
 }
 
-@media (min-width: 1024px) {
-  #hero-bg-article {
-    padding-top: 15.4rem;
-    padding-bottom: 15.4rem;
+@media (max-width: 470px) {
+  #hero-info h1 {
+    font-size: 2.4rem;
+  }
+  #hero-img {
+    height: 360px;
+    width: clamp(212px, 100%, 354px);
+  }
+}
+
+@media (max-width: 370px) {
+  #hero-info h1 {
+    font-size: 2rem;
+  }
+  #hero-img {
+    height: 280px;
+    width: clamp(212px, 100%, 269px);
+  }
+  #hero-info p {
+    font-size: 0.9rem;
   }
 
-  #hero-bg-article h1 {
-    font-size: 3.75rem;
-    line-height: 1;
+  #hero-info a {
+    font-size: 0.75rem;
+    padding: 0.45rem;
   }
-  #hero-bg-article p {
-    font-size: 1.5rem;
-    line-height: 2rem;
+}
+
+@media (max-width: 305px) {
+  #hero-info h1 {
+    font-size: 1.8rem !important;
+  }
+  #hero-info p {
+    font-size: 0.7rem;
+  }
+
+  #hero-info a {
+    font-size: 0.65rem;
+    padding: 0.35rem;
   }
 }
