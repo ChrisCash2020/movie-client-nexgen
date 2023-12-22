@@ -1,9 +1,7 @@
 #marketing-wrapper {
   font-family: inherit;
-  padding: 35px 0;
+  padding: 63px 28px;
   background: linear-gradient(to bottom, #003b4d 0%, #38bdf8 100%);
-  padding-left: 28px;
-  padding-right: 28px;
 }
 
 #marketing-container {
