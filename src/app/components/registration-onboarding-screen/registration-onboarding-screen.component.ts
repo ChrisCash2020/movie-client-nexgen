@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { OnboardingScreenItem } from '../../types/onboarding-screen-item';
-import { mockOnboardingData } from '../../helpers/onboarding-screen-mock-data';
-
+import { isEqual } from 'lodash';
 @Component({
   selector: 'app-registration-onboarding-screen',
   templateUrl: './registration-onboarding-screen.component.html',
@@ -12,5 +11,10 @@ import { mockOnboardingData } from '../../helpers/onboarding-screen-mock-data';
 })
 export class RegistrationOnboardingScreenComponent {
   // need to create a service worker to get the items
-  onboardingScreenItem: OnboardingScreenItem = mockOnboardingData[0];
+  @Input() onboardingScreenItem: OnboardingScreenItem | undefined;
+  @Input() index: number | undefined;
+  imgStyleFix: boolean | undefined;
+  ngOnInit() {
+    this.imgStyleFix = isEqual(this.index, 0);
+  }
 }

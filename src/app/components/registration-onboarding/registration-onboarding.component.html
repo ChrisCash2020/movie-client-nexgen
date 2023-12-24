@@ -20,8 +20,15 @@
       <button role="button" class="onboarding-dot">
         <span></span>
       </button>
+      <button role="button" class="onboarding-dot">
+        <span></span>
+      </button>
     </div>
-    <!-- <app-registration-onboarding-screen></app-registration-onboarding-screen> -->
+    <app-registration-onboarding-screen
+      *ngFor="let item of onboardingScreenItems; let i = index"
+      [onboardingScreenItem]="item"
+      [index]="i"
+    ></app-registration-onboarding-screen>
     <app-registration-form></app-registration-form>
   </div>
   <button

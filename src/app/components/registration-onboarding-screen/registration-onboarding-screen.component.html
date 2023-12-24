@@ -1,11 +1,15 @@
 <div class="onboarding-screen">
   <div class="media">
-    <img class="icon" src="{{ onboardingScreenItem.image }}" />
+    <img
+      [ngStyle]="{ 'margin-bottom': imgStyleFix ? '15px' : '0px' }"
+      class="icon"
+      src="{{ onboardingScreenItem?.image }}"
+    />
   </div>
-  <h3>{{ onboardingScreenItem.title }}</h3>
+  <h3>{{ onboardingScreenItem?.title }}</h3>
   <div style="height: 168px">
     <p>
-      {{ onboardingScreenItem.description }}
+      {{ onboardingScreenItem?.description }}
     </p>
   </div>
 </div>
