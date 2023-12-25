@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './landing-marketing.component.css',
 })
 export class LandingMarketingComponent {
+  mainImgUrl = 'assets/images/placeholder-image.png';
   title = 'Why Choose Us';
   description =
     'Rewrite your love story with us! Explore meaningful connections grounded in shared movie tastes. Join now for a cinematic journey to find your perfect match and lasting happiness!';
@@ -14,25 +15,25 @@ export class LandingMarketingComponent {
       title: 'Swipe',
       description:
         'Swipe into a world of shared passions: Our dating app connects hearts through a reel of mutual movie interests.',
-      iconUrl: 'assets/images/marketing-swipe.gif',
+      iconUrl: 'assets/images/marketing-swipe.png',
     },
     {
-      title: 'Message',
+      title: 'Cinematic Chats',
       description:
-        'We make connecting easy with seamless communication, icebreaker messages, and a variety of emojis and GIFs that allow you to express your self.',
-      iconUrl: 'assets/images/marketing-message.gif',
+        'Our icebreaker messages and a emojis/GIFs allow you to express your self easliy with seamlessly.',
+      iconUrl: 'assets/images/marketing-message.png',
     },
     {
-      title: 'Profile',
+      title: 'Dynamic Modes',
       description:
-        "Less is more: Build a user profile that's effortlessly simple yet effectively sparks meaningful connections.",
-      iconUrl: 'assets/images/marketing-profile.gif',
+        "Our app's dual modes effortlessly cater to both the single and relationship stages",
+      iconUrl: 'assets/images/marketing-modes.png',
     },
     {
-      title: 'Security',
+      title: 'Safe & Secure',
       description:
-        'Enjoy peace of mind with our secure, encrypted communication channels. Our Authentication feature is designed to create a secure environment for genuine connections.',
-      iconUrl: 'assets/images/onboarding-auth.gif',
+        'Enjoy peace of mind with our secure, encrypted communication channels.',
+      iconUrl: 'assets/images/marketing-auth.png',
     },
   ];
 }

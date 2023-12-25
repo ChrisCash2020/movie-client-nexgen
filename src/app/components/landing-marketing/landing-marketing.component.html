@@ -1,28 +1,36 @@
 <section class="marketing-wrapper">
-  <div class="marketing-content-container">
-    <div class="marketing-content-header">
-      <h1>{{ title }}</h1>
-      <p>
-        {{ description }}
-      </p>
-    </div>
-    <div class="marketing-content-article">
-      <div
-        *ngFor="let feature of features"
-        class="marketing-content-article-items"
-      >
-        <div class="item-icon">
-          <img
-            src="{{ feature.iconUrl }}"
-            alt="{{ 'Image of' + feature.title }}"
-          />
-        </div>
-        <h3>{{ feature.title }}</h3>
+  <div class="marketing-container">
+    <img
+      src="{{ mainImgUrl }}"
+      id="marketing-img"
+      alt="Landing page hero image"
+    />
+    <div class="marketing-info-container">
+      <div class="marketing-info-header">
+        <h1>{{ title }}</h1>
         <p>
-          {{ feature.description }}
+          {{ description }}
         </p>
+      </div>
+      <div class="marketing-info-features">
+        <div
+          *ngFor="let feature of features"
+          class="marketing-info-features-items"
+        >
+          <div class="item-icon-container">
+            <img
+              id="item-icon"
+              src="{{ feature.iconUrl }}"
+              alt="{{ 'Image of' + feature.title }}"
+            />
+            <span id="item-icon-dot"></span>
+          </div>
+          <h3>{{ feature.title }}</h3>
+          <p>
+            {{ feature.description }}
+          </p>
+        </div>
       </div>
     </div>
   </div>
-  <div class="marketing-image-container"></div>
 </section>
