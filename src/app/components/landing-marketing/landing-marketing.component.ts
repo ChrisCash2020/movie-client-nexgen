@@ -20,7 +20,7 @@ export class LandingMarketingComponent {
     {
       title: 'Cinematic Chats',
       description:
-        'Our icebreaker messages and a emojis/GIFs allow you to express your self easliy with seamlessly.',
+        'Our icebreaker messages and a emojis/GIFs allow you to express your self easliy and seamlessly.',
       iconUrl: 'assets/images/marketing-message.png',
     },
     {
