@@ -1,15 +1,21 @@
-<div class="onboarding-screen">
-  <div class="media">
-    <img
-      [ngStyle]="{ 'margin-bottom': imgStyleFix ? '15px' : '0px' }"
-      class="icon"
-      src="{{ onboardingScreenItem?.image }}"
-    />
+<ng-container>
+  <div *ngIf="displayOnboarding" class="onboarding-screen" @carouselAnimation>
+    <div class="media">
+      <img
+        [ngStyle]="{ 'margin-bottom': imgStyleFix ? '15px' : '0px' }"
+        class="icon"
+        src="{{ onboardingScreenItem?.image }}"
+      />
+    </div>
+    <h3>{{ onboardingScreenItem?.title }}</h3>
+    <div style="height: 168px">
+      <p>
+        {{ onboardingScreenItem?.description }}
+      </p>
+    </div>
   </div>
-  <h3>{{ onboardingScreenItem?.title }}</h3>
-  <div style="height: 168px">
-    <p>
-      {{ onboardingScreenItem?.description }}
-    </p>
-  </div>
-</div>
+  <app-registration-form
+    *ngIf="displayForm"
+    @carouselAnimation
+  ></app-registration-form>
+</ng-container>

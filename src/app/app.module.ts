@@ -17,6 +17,7 @@ import { RegistrationComponent } from './pages/registration/registration.compone
 import { RegistrationOnboardingScreenComponent } from './components/registration-onboarding-screen/registration-onboarding-screen.component';
 import { LandingGetstartedLogoComponent } from './components/landing-getstarted-logo/landing-getstarted-logo.component';
 import { LandingGetstartedComponent } from './components/landing-getstarted/landing-getstarted.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,13 @@ import { LandingGetstartedComponent } from './components/landing-getstarted/land
     LandingGetstartedLogoComponent,
     LandingGetstartedComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgbModule,
+    FormsModule,
+    BrowserAnimationsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -3,38 +3,34 @@
     type="button"
     role="presentation"
     class="onboarding-btns onboarding-prev"
+    (click)="onPreviousClick()"
   >
     <i class="bi bi-arrow-left-short"></i>
   </button>
   <div class="inner">
     <div class="onboarding-dots">
-      <button role="button" class="onboarding-dot">
-        <span></span>
-      </button>
-      <button role="button" class="onboarding-dot active">
-        <span></span>
-      </button>
-      <button role="button" class="onboarding-dot">
-        <span></span>
-      </button>
-      <button role="button" class="onboarding-dot">
-        <span></span>
-      </button>
-      <button role="button" class="onboarding-dot">
+      <button
+        *ngFor="let item of onboardingScreenItems; let i = index"
+        role="button"
+        class="onboarding-dot"
+        [ngClass]="{ 'onboarding-dot-active': i === currentSlide }"
+      >
         <span></span>
       </button>
     </div>
-    <app-registration-onboarding-screen
-      *ngFor="let item of onboardingScreenItems; let i = index"
-      [onboardingScreenItem]="item"
-      [index]="i"
-    ></app-registration-onboarding-screen>
-    <app-registration-form></app-registration-form>
+    <ng-container *ngFor="let item of onboardingScreenItems; let i = index">
+      <app-registration-onboarding-screen
+        *ngIf="i === currentSlide"
+        [onboardingScreenItem]="item"
+        [index]="i"
+      ></app-registration-onboarding-screen>
+    </ng-container>
   </div>
   <button
     type="button"
     role="presentation"
     class="onboarding-btns onboarding-next"
+    (click)="onNextClick()"
   >
     <i class="bi bi-arrow-right-short"></i>
   </button>
