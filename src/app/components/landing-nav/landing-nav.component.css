@@ -56,9 +56,11 @@ ul {
   display: inline-block;
   margin-top: 5px;
   font-weight: 500;
+  color: #374151;
 }
 .nav-logo-mobile {
   display: inline-block;
+  color: #374151;
 }
 
 /* ==============================================
@@ -70,7 +72,7 @@ ul {
   font-weight: 400;
   border-radius: 8px !important;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
-  text-shadow: 1px 1px 1px #979797;
+  color: #374151;
 }
 
 .btn:hover {
@@ -79,7 +81,7 @@ ul {
 
 .btn-demo-small {
   font-size: 12px;
-  background-color: #ffc200;
+  background-color: #374151;
   padding: 0px 4px;
 }
 
@@ -108,9 +110,6 @@ ul {
 }
 
 @media (max-width: 581px) {
-  .btn {
-    text-shadow: none;
-  }
   .nav-right {
     float: left;
   }
