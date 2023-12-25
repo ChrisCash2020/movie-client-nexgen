@@ -1,9 +1,0 @@
-svg {
-  width: 2.5rem;
-}
-
-@media (min-width: 768px) {
-  svg {
-    width: 9rem;
-  }
-}

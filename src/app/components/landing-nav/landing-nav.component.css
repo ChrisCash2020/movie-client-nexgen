@@ -3,6 +3,9 @@ ul {
   padding-left: 0px;
 }
 
+.container {
+  max-width: 1532px !important;
+}
 /* ==============================================
    2. Navbar 
 ===============================================*/
@@ -86,7 +89,7 @@ ul {
 }
 
 .btn-demo-small:hover {
-  background-color: #ffce2d;
+  opacity: 0.9;
 }
 
 .btn-demo-small a {
