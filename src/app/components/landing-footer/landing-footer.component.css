@@ -43,6 +43,15 @@ hr {
   height: 2.5rem;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#text-break {
+  display: none;
+}
+
 @media (min-width: 1024px) {
   hr {
     margin-top: 2rem;
@@ -68,7 +77,12 @@ hr {
   }
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+@media (max-width: 486px) {
+  #text-break {
+    display: block;
+  }
+
+  #divider {
+    display: none;
+  }
 }
