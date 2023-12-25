@@ -15,7 +15,8 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { RegistrationOnboardingComponent } from './components/registration-onboarding/registration-onboarding.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { RegistrationOnboardingScreenComponent } from './components/registration-onboarding-screen/registration-onboarding-screen.component';
-import { LandingFooterLogoComponent } from './components/landing-footer-logo/landing-footer-logo.component';
+import { LandingGetstartedLogoComponent } from './components/landing-getstarted-logo/landing-getstarted-logo.component';
+import { LandingGetstartedComponent } from './components/landing-getstarted/landing-getstarted.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { LandingFooterLogoComponent } from './components/landing-footer-logo/lan
     RegistrationOnboardingComponent,
     RegistrationComponent,
     RegistrationOnboardingScreenComponent,
-    LandingFooterLogoComponent,
+    LandingGetstartedLogoComponent,
+    LandingGetstartedComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, FormsModule],
   providers: [],
