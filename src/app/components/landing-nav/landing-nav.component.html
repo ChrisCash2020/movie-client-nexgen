@@ -37,32 +37,19 @@
 
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <div class="container">
-      <div class="nav-logo-desktop navbar-brand">
+      <a class="nav-logo-desktop navbar-brand" routerLink="/landing">
         <img
           src="assets\images\movie-client-logo.png"
           class="img-fluid"
           alt="MovieConnect Logo"
         />
         MovieConnect
-      </div>
+      </a>
 
-      <ul
-        class="navbar-nav ml-auto nav-right"
-        data-easing="easeInOutExpo"
-        data-speed="1250"
-        data-offset="65"
-      >
-        <li class="nav-item nav-custom-link btn btn-demo-small">
-          <a class="nav-link" routerLink="/register"
-            >Sign Up <i class="bi bi-chevron-right icon-mobile"></i
-          ></a>
-        </li>
-        <li class="nav-item nav-custom-link">
-          <a class="nav-link" routerLink="/login"
-            >Sign In <i class="bi bi-chevron-right icon-mobile"></i
-          ></a>
-        </li>
-      </ul>
+      <a class="login-link" routerLink="/login">
+        <i class="bi bi-box-arrow-in-right"></i>
+        Login
+      </a>
     </div>
   </div>
 </nav>
