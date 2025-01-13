@@ -1,87 +1,142 @@
-<form>
-  <div class="center col">
-    <label class="custom-file-upload" style="margin-top: 25px"
-      ><div class="img-wrap img-upload">
-        <img />
+<div class="container">
+  <div class="wrapper">
+    <div class="info">
+      <div class="register-header">
+        <svg
+          stroke="currentColor"
+          fill="currentColor"
+          stroke-width="0"
+          viewBox="0 0 512 512"
+          class="login-icon"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M416 448h-84c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h84c17.7 0 32-14.3 
+                     32-32V160c0-17.7-14.3-32-32-32h-84c-6.6 0-12-5.4-12-12V76c0-6.6 5.4-12 
+                     12-12h84c53 0 96 43 96 96v192c0 53-43 96-96 96zm-47-201L201 79c-15-15-41-4.5-41 
+                     17v96H24c-13.3 0-24 10.7-24 24v96c0 13.3 10.7 24 24 24h136v96c0 21.5 26 
+                     32 41 17l168-168c9.3-9.4 9.3-24.6 0-34z"
+          ></path>
+        </svg>
+        <p>Register</p>
+        <div class="social-login">
+          <asl-google-signin-button
+            type="standard"
+            size="large"
+            text="signup_with"
+            theme="outline"
+            class="google-login"
+          ></asl-google-signin-button>
+        </div>
       </div>
-      <input
-        id="photo-upload"
-        type="file"
-        name="img"
-        accept="image/gif, image/jpeg, image/png"
-    /></label>
-  </div>
-  <div class="form-group">
-    <input
-      type="text"
-      placeholder="First Name"
-      class="form-control"
-      name="firstname"
-    />
-    <input
-      type="text"
-      placeholder="Last Name"
-      class="form-control"
-      name="lastname"
-    />
-  </div>
-  <div class="form-wrapper">
-    <input
-      type="text"
-      placeholder="Username"
-      class="form-control"
-      name="username"
-    />
-    <i class="bi bi-person-fill"></i>
-  </div>
-  <div class="form-wrapper">
-    <input
-      type="password"
-      placeholder="Password"
-      class="form-control"
-      name="password"
-    />
-    <i class="bi bi-key-fill"></i>
-  </div>
-  <div class="form-wrapper">
-    <input
-      type="text"
-      class="form-control"
-      placeholder="Birthday (DD/MM/YYYY)"
-      aria-label="Birthday"
-      name="name"
-      [(ngModel)]="model"
-      ngbDatepicker
-      #d="ngbDatepicker"
-    />
-    <i
-      style="font-size: 10px; padding-right: 2px"
-      class="bi bi-calendar-fill"
-      (click)="d.toggle()"
-      type="button"
-    ></i>
-  </div>
-  <div class="form-wrapper">
-    <select name="" id="" class="form-control">
-      <option value="" disabled="" selected="">Status</option>
-      <option value="male">Single</option>
-      <option value="female">Taken</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <select name="" id="" class="form-control">
-      <option value="" disabled="" selected="">Gender</option>
-      <option value="male">Male</option>
-      <option value="female">Female</option>
-      <option value="other">Other</option>
-    </select>
+    </div>
+    <div class="divider-container">
+      <div class="divider-vertical"></div>
+      <p>OR</p>
+      <div class="divider-vertical"></div>
+    </div>
+    <div class="form-wrapper">
+      <form class="register-form">
+        <label class="custom-file-upload">
+          <div class="img-upload">
+            <img />
+          </div>
+          <input
+            id="photo-upload"
+            type="file"
+            name="img"
+            accept="image/gif, image/jpeg, image/png"
+          />
+        </label>
+        <div class="input-group">
+          <input
+            type="text"
+            placeholder="First"
+            class="input-field"
+            name="firstname"
+          />
+          <input
+            type="text"
+            placeholder="Last"
+            class="input-field"
+            name="lastname"
+          />
+        </div>
+        <div class="input-group">
+          <input
+            type="text"
+            placeholder="Username"
+            class="input-field"
+            name="username"
+          />
+          <input
+            name="email"
+            type="text"
+            class="input-field"
+            placeholder="Email Address"
+          />
+        </div>
+        <div class="input-group">
+          <input
+            name="password"
+            type="password"
+            class="input-field"
+            placeholder="Password"
+          />
+          <input
+            name="password2"
+            type="password"
+            class="input-field"
+            placeholder="Confirm Password"
+          />
+        </div>
 
-    <select name="" id="" class="form-control">
-      <option value="" disabled="" selected="">Preferences</option>
-      <option value="male">Male</option>
-      <option value="femal">Female</option>
-      <option value="other">Other</option>
-    </select>
+        <div class="input-field-wrapper">
+          <input
+            type="text"
+            class="input-field"
+            placeholder="Birthday (dd/mm/yyyy)"
+            aria-label="Birthday"
+            name="name"
+            style="width: 100%"
+            [(ngModel)]="model"
+            ngbDatepicker
+            #d="ngbDatepicker"
+          />
+          <i class="bi bi-calendar-fill" (click)="d.toggle()" type="button"></i>
+        </div>
+        <div class="input-group">
+          <select name="gender" class="input-field" required>
+            <option value="" disabled selected>Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+          <select name="preferences" class="input-field" required>
+            <option value="" disabled selected>Preferences</option>
+            <option value="male">Male</option>
+            <option value="femal">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <select
+            name="status"
+            class="input-field"
+            style="width: 100%"
+            required
+          >
+            <option value="" disabled selected>Status</option>
+            <option value="male">Single</option>
+            <option value="female">Taken</option>
+          </select>
+        </div>
+        <a class="submit-btn"> Submit </a>
+        <div class="divider">
+          <p>Already have an account?</p>
+        </div>
+        <a class="submit-btn" routerLink="/login"> Sign In </a>
+      </form>
+    </div>
   </div>
-  <button class="button">Submit</button>
-</form>
+</div>

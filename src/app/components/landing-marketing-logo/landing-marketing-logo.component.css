@@ -1,0 +1,18 @@
+svg {
+  height: 320px;
+  width: clamp(312px, 100%, 460px);
+}
+
+@media (min-width: 974px) {
+  svg {
+    height: 210px;
+    width: clamp(312px, 100%, 360px);
+  }
+}
+
+@media (max-width: 350px) {
+  svg {
+    height: 210px;
+    width: 180px;
+  }
+}

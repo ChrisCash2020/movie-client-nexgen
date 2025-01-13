@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './landing-marketing.component.css',
 })
 export class LandingMarketingComponent {
-  mainImgUrl = 'assets/images/placeholder-image.png';
+  mainImgUrl = 'assets/images/marketing-hero.webp';
   title = 'Why Choose Us';
   description =
     'Rewrite your love story with us! Explore meaningful connections grounded in shared movie tastes. Join now for a cinematic journey to find your perfect match and lasting happiness!';

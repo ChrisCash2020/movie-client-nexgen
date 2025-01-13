@@ -13,6 +13,7 @@
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 50px;
 }
 .marketing-info-container {
   padding-bottom: 7rem;
@@ -135,6 +136,12 @@
   }
 }
 
+@media (max-width: 974px) {
+  .marketing-container {
+    gap: 0px;
+  }
+}
+
 @media (max-width: 813px) {
   .marketing-info-features {
     gap: 10px;
@@ -180,7 +187,7 @@
   }
 }
 
-@media (max-width: 370px) {
+@media (max-width: 385px) {
   #marketing-img {
     height: 280px;
     width: clamp(212px, 100%, 269px);

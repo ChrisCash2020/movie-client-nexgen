@@ -1,11 +1,10 @@
-<div class="wrapper col-lg-11 text-center mx-auto col-12">
+<div class="wrapper">
   <button
-    type="button"
-    role="presentation"
     class="onboarding-btns onboarding-prev"
+    [disabled]="isPreviousClickDisabled()"
     (click)="onPreviousClick()"
   >
-    <i class="bi bi-arrow-left-short"></i>
+    <i class="bi bi-chevron-left"></i>
   </button>
   <div class="inner">
     <div class="onboarding-dots">
@@ -27,11 +26,10 @@
     </ng-container>
   </div>
   <button
-    type="button"
-    role="presentation"
     class="onboarding-btns onboarding-next"
+    [disabled]="isNextClickDisabled()"
     (click)="onNextClick()"
   >
-    <i class="bi bi-arrow-right-short"></i>
+    <i class="bi bi-chevron-right"></i>
   </button>
 </div>

@@ -3,11 +3,13 @@ ul {
   padding-left: 0px;
 }
 
-.container {
+#container {
   max-width: 1532px !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100vw;
+  margin: auto;
 }
 /* ==============================================
    2. Navbar 
@@ -17,6 +19,9 @@ ul {
   background-color: #ffffff !important;
   border-bottom: 1px solid #efefef;
   max-height: 80px;
+  position: sticky;
+  width: 100vw;
+  top: 0;
 }
 
 .navbar-toggler {
@@ -44,6 +49,7 @@ ul {
 }
 .navbar a {
   color: #374151 !important;
+  text-decoration: none;
 }
 
 .nav-right {
@@ -91,7 +97,7 @@ ul {
 }
 
 /* ==============================================
-   9. Media Queries
+   5. Media Queries
 ===============================================*/
 
 @media (max-width: 310px) {
@@ -152,6 +158,10 @@ ul {
 
 @media (max-width: 330px) {
   .login-link {
+    transform: scale(0.8);
+  }
+
+  .profile-container {
     transform: scale(0.8);
   }
 }

@@ -18,6 +18,18 @@ import { RegistrationOnboardingScreenComponent } from './components/registration
 import { LandingGetstartedLogoComponent } from './components/landing-getstarted-logo/landing-getstarted-logo.component';
 import { LandingGetstartedComponent } from './components/landing-getstarted/landing-getstarted.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  SocialLoginModule,
+  SocialAuthServiceConfig,
+  GoogleLoginProvider,
+  GoogleSigninButtonModule,
+  GoogleSigninButtonDirective,
+} from '@abacritt/angularx-social-login';
+import { environment } from '../environments/environment';
+import { LandingMarketingLogoComponent } from './components/landing-marketing-logo/landing-marketing-logo.component';
+import { LandingNavLinksComponent } from './components/landing-nav-links/landing-nav-links.component';
+import { DirectMessagesComponent } from './components/direct-messages/direct-messages.component';
+import { MessagesComponent } from './pages/messages/messages.component';
 
 @NgModule({
   declarations: [
@@ -35,15 +47,39 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RegistrationOnboardingScreenComponent,
     LandingGetstartedLogoComponent,
     LandingGetstartedComponent,
+    LandingMarketingLogoComponent,
+    LandingNavLinksComponent,
+    DirectMessagesComponent,
+    MessagesComponent,
   ],
   imports: [
+    SocialLoginModule,
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
     BrowserAnimationsModule,
+    GoogleSigninButtonModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        lang: 'en',
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(environment.googleClientId),
+          },
+        ],
+        onError: (err) => {
+          console.error(err);
+        },
+      } as SocialAuthServiceConfig,
+    },
+    GoogleSigninButtonDirective,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

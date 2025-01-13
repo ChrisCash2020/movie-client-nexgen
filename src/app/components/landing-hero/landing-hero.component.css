@@ -119,7 +119,7 @@
   }
 }
 
-@media (max-width: 370px) {
+@media (max-width: 385px) {
   #hero-info h1 {
     font-size: 2rem;
   }

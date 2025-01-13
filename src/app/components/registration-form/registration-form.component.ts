@@ -1,4 +1,5 @@
-import { Component, Injectable } from '@angular/core';
+import { SocialAuthService, SocialUser } from '@abacritt/angularx-social-login';
+import { Component, Injectable, OnInit } from '@angular/core';
 import {
   NgbDateParserFormatter,
   NgbDateStruct,
@@ -37,7 +38,30 @@ export class CustomDateParserFormatter extends NgbDateParserFormatter {
     { provide: NgbDateParserFormatter, useClass: CustomDateParserFormatter },
   ],
 })
-export class RegistrationFormComponent {
+export class RegistrationFormComponent implements OnInit {
   //@ts-ignore
   model: NgbDateStruct;
+
+  user: SocialUser = new SocialUser();
+  loggedIn: boolean = false;
+
+  constructor(private authService: SocialAuthService) {}
+
+  ngOnInit() {
+    this.authService.authState.subscribe((user) => {
+      this.user = user;
+      this.loggedIn = user != null;
+      console.log(this.loggedIn);
+      if (this.loggedIn) {
+        this.handleLoginSuccess(user);
+      }
+    });
+  }
+  handleLoginSuccess(user: SocialUser) {
+    console.log('Login successful', user);
+    // Add your custom logic here, such as:
+    // - Sending the user data to your backend
+    // - Updating the UI
+    // - Storing the user information in local storage
+  }
 }
