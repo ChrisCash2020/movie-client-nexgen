@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingNavComponent } from './components/landing-nav/landing-nav.component';
@@ -30,6 +29,7 @@ import { LandingMarketingLogoComponent } from './components/landing-marketing-lo
 import { LandingNavLinksComponent } from './components/landing-nav-links/landing-nav-links.component';
 import { DirectMessagesComponent } from './components/direct-messages/direct-messages.component';
 import { MessagesComponent } from './pages/messages/messages.component';
+import { GraphQLModule } from './graphql.module';
 
 @NgModule({
   declarations: [
@@ -56,10 +56,10 @@ import { MessagesComponent } from './pages/messages/messages.component';
     SocialLoginModule,
     BrowserModule,
     AppRoutingModule,
-    NgbModule,
     FormsModule,
     BrowserAnimationsModule,
     GoogleSigninButtonModule,
+    GraphQLModule,
   ],
   providers: [
     {
@@ -70,7 +70,7 @@ import { MessagesComponent } from './pages/messages/messages.component';
         providers: [
           {
             id: GoogleLoginProvider.PROVIDER_ID,
-            provider: new GoogleLoginProvider(environment.googleClientId),
+            provider: new GoogleLoginProvider(environment.GOOGLE_CLIENT_ID),
           },
         ],
         onError: (err) => {
