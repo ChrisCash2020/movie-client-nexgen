@@ -16,9 +16,9 @@ export class LandingNavComponent implements OnInit {
   ngOnInit() {
     // this.http.get('https://api.example.com/user').subscribe((data) => {
     // this.userService.setUser();
-    const userPresent = this.userService.getUser() != null;
-    this.displayProfile = userPresent;
-    this.homeLink = userPresent ? '/main' : '/landing';
+    // const userPresent = this.userService.getUser() != null;
+    // this.displayProfile = userPresent;
+    // this.homeLink = userPresent ? '/main' : '/landing';
     // this.displayProfile = true;
     // });
   }

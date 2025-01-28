@@ -41,6 +41,8 @@
             type="text"
             class="input-field"
             placeholder="Email Address"
+            [(ngModel)]="email"
+            required
           />
         </div>
         <div class="input-group">
@@ -49,12 +51,14 @@
             type="password"
             class="input-field"
             placeholder="Password"
+            [(ngModel)]="password"
+            required
           />
         </div>
         <div class="actions">
           <a class="forgot-password" href="#">Forgot password?</a>
         </div>
-        <a class="submit-btn" routerLink="/login"> Sign In </a>
+        <a class="submit-btn" (click)="handleInternalSignIn()"> Sign In </a>
         <div class="divider">
           <p>Don't have an account?</p>
         </div>

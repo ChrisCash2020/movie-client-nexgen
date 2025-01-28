@@ -1,18 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from './services/user.service';
-import { HttpClient } from '@angular/common/http';
+import { User } from './generated/graphql';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
+  users: User[] = [];
   constructor(private userService: UserService) {}
 
   ngOnInit() {
-    // this.http.get('https://api.example.com/user').subscribe((data) => {
-    // this.userService.setUser(data);
-    // });
+    this.userService.getUsers().subscribe({
+      next: (users) => {
+        this.users = users;
+        console.log(this.users);
+      },
+      error: (error) => console.error('Error fetching users: ', error),
+    });
   }
 }

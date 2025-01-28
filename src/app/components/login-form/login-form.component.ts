@@ -1,5 +1,7 @@
 import { SocialAuthService, SocialUser } from '@abacritt/angularx-social-login';
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
+import { User } from '../../generated/graphql';
 
 @Component({
   selector: 'app-login-form',
@@ -7,19 +9,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './login-form.component.css',
 })
 export class LoginFormComponent implements OnInit {
-  user: SocialUser = new SocialUser();
+  email: string = '';
+  password: string = '';
+  user: User | undefined;
   loggedIn: boolean = false;
 
-  constructor(private authService: SocialAuthService) {}
+  constructor(
+    private socialAuthService: SocialAuthService,
+    private authService: AuthService
+  ) {}
 
   ngOnInit() {
-    this.authService.authState.subscribe((user) => {
-      this.user = user;
-      this.loggedIn = user != null;
-      console.log(this.loggedIn);
-      if (this.loggedIn) {
-        this.handleLoginSuccess(user);
-      }
+    this.socialAuthService.authState.subscribe((user) => {
+      // this.user = user;
+      // this.loggedIn = user != null;
+      // console.log(this.loggedIn);
+      // if (this.loggedIn) {
+      //   this.handleLoginSuccess(user);
+      // }
     });
   }
   handleLoginSuccess(user: SocialUser) {
@@ -28,5 +35,15 @@ export class LoginFormComponent implements OnInit {
     // - Sending the user data to your backend
     // - Updating the UI
     // - Storing the user information in local storage
+  }
+
+  handleInternalSignIn() {
+    this.authService.internalSignIn(this.email, this.password).subscribe({
+      next: (user) => {
+        this.user = user;
+        console.log(this.user);
+      },
+      error: (error) => console.error('Error fetching users: ', error),
+    });
   }
 }

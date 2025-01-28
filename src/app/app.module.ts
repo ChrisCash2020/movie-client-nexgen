@@ -30,6 +30,7 @@ import { LandingNavLinksComponent } from './components/landing-nav-links/landing
 import { DirectMessagesComponent } from './components/direct-messages/direct-messages.component';
 import { MessagesComponent } from './pages/messages/messages.component';
 import { GraphQLModule } from './graphql.module';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -79,6 +80,7 @@ import { GraphQLModule } from './graphql.module';
       } as SocialAuthServiceConfig,
     },
     GoogleSigninButtonDirective,
+    provideHttpClient(),
   ],
   bootstrap: [AppComponent],
 })
