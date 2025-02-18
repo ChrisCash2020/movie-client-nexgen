@@ -31,6 +31,7 @@ import { DirectMessagesComponent } from './components/direct-messages/direct-mes
 import { MessagesComponent } from './pages/messages/messages.component';
 import { GraphQLModule } from './graphql.module';
 import { provideHttpClient } from '@angular/common/http';
+import { BeforePreloaderComponent } from './components/before-preloader/before-preloader.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { provideHttpClient } from '@angular/common/http';
     LandingNavLinksComponent,
     DirectMessagesComponent,
     MessagesComponent,
+    BeforePreloaderComponent,
   ],
   imports: [
     SocialLoginModule,

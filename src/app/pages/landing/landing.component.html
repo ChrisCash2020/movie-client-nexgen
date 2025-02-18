@@ -1,7 +1,10 @@
 <div class="min-vh-100">
-  <app-landing-nav></app-landing-nav>
-  <app-landing-hero></app-landing-hero>
-  <app-landing-marketing></app-landing-marketing>
-  <app-landing-getstarted></app-landing-getstarted>
-  <app-landing-footer></app-landing-footer>
+  <app-before-preloader [isLoading]="isLoading"></app-before-preloader>
+  <ng-container *ngIf="!isAuth && !isLoading">
+    <app-landing-nav></app-landing-nav>
+    <app-landing-hero></app-landing-hero>
+    <app-landing-marketing></app-landing-marketing>
+    <app-landing-getstarted></app-landing-getstarted>
+    <app-landing-footer></app-landing-footer>
+  </ng-container>
 </div>

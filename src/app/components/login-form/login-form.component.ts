@@ -21,6 +21,8 @@ export class LoginFormComponent implements OnInit {
 
   ngOnInit() {
     this.socialAuthService.authState.subscribe((user) => {
+      console.log('Login successful', user);
+
       // this.user = user;
       // this.loggedIn = user != null;
       // console.log(this.loggedIn);
